@@ -21,6 +21,8 @@ Environment Setup for Privmon
 3. Run: 'sudo docker-compose up'
 4. Run: 'bash create topics.sh'
 
+Simulate Attack and Detection
+
 Decision-based 
 2.1. Python main.py –action 0 [train model]
 2.2. python main.py --blackadvattack HopSkipJump --dataset_ID 0 --datasets CIFAR10 -number_classes 10
