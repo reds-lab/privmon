@@ -1,39 +1,68 @@
-# privmon
-This is an official repository for PrivMon: A Stream-Based System for Real-Time Privacy Attack Detection for Machine Learning Models (RAID 2023)
+# **PrivMon: Real-Time Privacy Attack Detection System**
 
+Welcome to the official repository for **PrivMon**. This system, presented at RAID 2023, is a stream-based solution for real-time privacy attack detection targeting machine learning models.
 
-Environment Setup for 
+## **Environment Setup**
 
-Conda env create -f environment.yml --name myenv
+1. **Conda Environment**
+    ```bash
+    conda env create -f environment.yml --name myenv
+    ```
 
-Replace lpips in anaconda package 
+2. **Replace lpips in Anaconda Package**
 
-Download CelebA dataset:
-https://www.google.com/search?q=celeba&rlz=1C5MACD_enUS1023US1024&oq=celeba&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhB0gEIMjE4OGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
+## **Model Inversion Attack Preparation**
 
-Download models:
-We use the same models. You can download them at link : https://drive.google.com/drive/folders/1U4gekn72UX_n1pHdm9GQUQwwYVDvpTfN
-You can also download the generator model from link: https://drive.google.com/drive/folders/1L3frX-CE4j36pe5vVWuy3SgKGS9kkA70?usp=sharing.
+1. **Datasets**
+    - Download the **CelebA** and **Facescrub** datasets from their respective official websites.
 
-Environment Setup for Privmon
-1. Install Docker Engine
-2. Start Docker service: 'sudo systemctl start docker'
-3. Run: 'sudo docker-compose up'
-4. Run: 'bash create topics.sh'
+2. **Models**
+    - We leverage the same target models and GANs as previous research. 
+    - Download target models [here](https://drive.google.com/drive/folders/1U4gekn72UX_n1pHdm9GQUQwwYVDvpTfN).
+    - Download generator [here](https://drive.google.com/drive/folders/1L3frX-CE4j36pe5vVWuy3SgKGS9kkA70?usp=sharing).
 
-Simulate Attack and Detection
+3. **Additional References**
+    - For more detailed insights, please visit the related project: [Label-Only Model Inversion Attacks via Boundary Repulsion](https://github.com/m-kahla/Label-Only-Model-Inversion-Attacks-via-Boundary-Repulsion).
 
-Decision-based 
-2.1. Python main.py –action 0 [train model]
-2.2. python main.py --blackadvattack HopSkipJump --dataset_ID 0 --datasets CIFAR10 -number_classes 10
-2.3. python main.py -d CIFAR10 -a HSJ --metrics perc_lsh_step1_orig_level2
+## **System Setup for PrivMon**
 
-Membership inference 
-2.1. Python training.py –ndata 1000 –dataset 'cifar10' [train model]
-2.2. Python pipeline_main.py –ndata 1000 –dataset 'cifar10' –attacks 'r' –r 5 [attack]
+1. **Docker Engine**
+    - Install the Docker Engine.
 
-Model inversion 
-2.1. Python magnetic_main.py
+2. **Docker Services**
+    ```bash
+    sudo systemctl start docker
+    sudo docker-compose up
+    ```
 
-Upload one malicious query + a benign one - from my side
-Run the system on these queries. 
+3. **Kafka Topics**
+    ```bash
+    bash create topics.sh
+    ```
+
+## **Simulate Attack and Detection**
+
+### **Decision-Based Attacks**
+
+1. **Train Model**
+    ```bash
+    python main.py –action 0
+    ```
+
+2. **Black-Box Adversarial Attack**
+    ```bash
+    python main.py --blackadvattack HopSkipJump --dataset_ID 0 --datasets CIFAR10 --number_classes 10
+    ```
+
+3. **Metrics**
+    ```bash
+    python main.py -d CIFAR10 -a HSJ --metrics perc_lsh_step1_orig_level2
+    ```
+
+### **Model Inversion Attacks**
+
+1. **Execute Attack**
+    ```bash
+    python magnetic_main.py
+    ```
+
