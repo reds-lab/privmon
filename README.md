@@ -1,6 +1,6 @@
 # **PrivMon: Real-Time Privacy Attack Detection System**
 
-This is the official repository for **PrivMon**. This system, presented at RAID 2023, is a stream-based solution for real-time privacy attack detection targeting machine learning models.
+This is the official repository for **PrivMon**, presented at RAID 2023. This system is a stream-based solution for real-time privacy attack detection targeting machine learning models.
 
 ## **Environment Setup**
 
