@@ -14,7 +14,7 @@ Welcome to the official repository for **PrivMon**. This system, presented at RA
 ## **Model Inversion Attack Preparation**
 
 1. **Datasets**
-    - Download the **CelebA** and **Facescrub** datasets from their respective official websites.
+    - Download the **CelebA** and **Facescrub** datasets from their official websites.
 
 2. **Models**
     - We leverage the same target models and GANs as previous research. 
