@@ -22,7 +22,7 @@ Welcome to the official repository for **PrivMon**. This system, presented at RA
     - Download generator [here](https://drive.google.com/drive/folders/1L3frX-CE4j36pe5vVWuy3SgKGS9kkA70?usp=sharing).
 
 3. **Additional References**
-    - For more detailed insights, please visit the related project: [Label-Only Model Inversion Attacks via Boundary Repulsion](https://github.com/m-kahla/Label-Only-Model-Inversion-Attacks-via-Boundary-Repulsion).
+    - For more details, please see the related project: [Label-Only Model Inversion Attacks via Boundary Repulsion](https://github.com/m-kahla/Label-Only-Model-Inversion-Attacks-via-Boundary-Repulsion).
 
 ## **System Setup for PrivMon**
 
