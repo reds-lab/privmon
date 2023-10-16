@@ -49,20 +49,12 @@ Welcome to the official repository for **PrivMon**. This system, presented at RA
     python main.py –action 0
     ```
 
-2. **Black-Box Adversarial Attack**
+2. **Simulate the Attack**
     ```bash
     python main.py --blackadvattack HopSkipJump --dataset_ID 0 --datasets CIFAR10 --number_classes 10
     ```
 
-3. **Metrics**
+3. **System Evaluation**
     ```bash
     python main.py -d CIFAR10 -a HSJ --metrics perc_lsh_step1_orig_level2
     ```
-
-### **Model Inversion Attacks**
-
-1. **Execute Attack**
-    ```bash
-    python magnetic_main.py
-    ```
-
