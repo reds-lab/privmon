@@ -65,9 +65,9 @@ This is the official repository for **PrivMon**. This system, presented at RAID 
 
 1. **Simulate the Attack [in the corresponding attack folder]**
     ```bash
-    python main.py --blackadvattack HopSkipJump --dataset_ID 0 --datasets CIFAR10 --number_classes 10
+    python magnetic_main.py
     ```
 2. **System Evaluation [in the ml-privacy folder]**
     ```bash
-    python main.py -d CIFAR10 -a HSJ --metrics perc_lsh_step1_orig_level2
+    python main.py --dataset CelebA --metric perc_lsh_step1_orig_level2
     ```
